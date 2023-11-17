@@ -1,4 +1,4 @@
-# Robotics System Design 101
+# Robotics System Design
 The collection of system design patterns and examples to conduct and prepare for Robotics System Design interview.
 
 > **_NOTE:_**  This repo mostly focuses on **mobile robotics**, however some of the patterns are universal among various robotics domains.
@@ -8,14 +8,18 @@ The collection of system design patterns and examples to conduct and prepare for
 * [Motivation](#motivation)
 * [Frameworks](#frameworks)
     * [ROS](#ros)
-* [Autopilot](#autopilot)
+* [Autopilot software](#autopilot-software)
     * [Autonomy 2.0](#autonomy-20)
     * [Perception](#perception)
         * [Fusion](#fusion)
     * [Localization and Mapping](#localization-and-mapping)
     * [Prediction and path planning](#prediction-and-path-planning)
         * [Two layered path planning](#two-layered-path-planning)
+    * [Decision making](#decision-making)
     * [Simulators](#simulators)
+    * [Data pipelines](#data-pipelines)
+* [Hardware](#hardware)
+    * [Autonomous Domain Controller](#autonomous-domain-controller)
 
 ## Motivation
 
@@ -29,7 +33,7 @@ Overall design of the ROS2 is described on the [website](http://design.ros2.org)
 
 #### Client library 
 
-## Autopilot
+## Autopilot software
 
 ### Autonomy 2.0
 <img src="https://media.arxiv-vanity.com/render-output/8036325/x3.png" alt="amount of ml in autonomy" width="500"/>
@@ -58,8 +62,28 @@ By abstraction level:
 
 - End-to-end prediction and path planning
 
+### Decision making
+- Finite state machines
+- Behavior trees
+
+<img src="https://habrastorage.org/getpro/habr/post_images/2d6/d07/8b0/2d6d078b0cf90b680b341cb161500752.png" alt="bt vs fsm" width="500"/>
+
 ### Simulators
 - Handcrafted agents
 - Learned agents polices
 - Log replay
 <!-- https://www.youtube.com/watch?v=S59lIhwU4dA -->
+
+### Data pipelines
+
+ [Autonomous Driving and ADAS Data Lake on AWS](https://aws.amazon.com/blogs/architecture/field-notes-building-an-autonomous-driving-and-adas-data-lake-on-aws/)
+
+<img src="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2020/10/12/Autonomous-Driving-Data-Lake-RA-1024x576.jpg" alt="amazon data lake" width="500"/>
+
+## Hardware
+
+###  Autonomous Domain Controller
+
+[An autonomous domain controller is a specialized computer that controls specific groups of functions, or “domains” of activity or features, enabling the entire autonomous driving software stack](https://www.tusimple.com/blogs/developing-a-production-ready-autonomous-domain-controller-with-nvidia/)
+
+<img src="https://www.aptiv.com/images/default-source/feature-stories/domain-controllers.jpg?sfvrsn=f0bff53d_3" alt="adc" width="500"/>
